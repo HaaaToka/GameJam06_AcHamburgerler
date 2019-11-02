@@ -1,16 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoulParticle : MonoBehaviour
 {
+    public float particleCount = 100f;
+    public float loseMultiplier = 3f;
     [SerializeField] GameObject particle;
+    private Text particleText;
     private Animator[] animators;
     Collider lastHit;
 
     // Start is called before the first frame update
     void Start()
     {
+        particleText = GameObject.Find("particleText").GetComponent<Text>();
+        particleText.text = Mathf.Ceil(particleCount).ToString();
         var players = GameObject.FindGameObjectsWithTag("Player");
         int len=0;
         for(int i = 0; i< players.Length; i++)
@@ -31,6 +37,7 @@ public class SoulParticle : MonoBehaviour
     {
         soulActive();
     }
+   
     void soulActive()
     {
         
@@ -42,10 +49,15 @@ public class SoulParticle : MonoBehaviour
 
             if (Physics.Raycast(ray, out hitInfo))
             {
+                if (hitInfo.collider.tag != "rayPlane" && hitInfo.collider.tag != "Player")
+                {
+                    if(particle.GetComponent<ParticleSystem>().isPlaying)
+                        particleCount -= loseMultiplier * Time.deltaTime;
+                    particleText.text = Mathf.Ceil(particleCount).ToString();
+                }
                 gameObject.transform.position = hitInfo.point;
                 if (hitInfo.collider.tag == "Player" && Input.GetMouseButtonDown(0))
                 {
-                    Debug.Log("sda");
                     hitInfo.collider.GetComponent<Animator>().SetBool("isTapped", true);
                     particle.SetActive(true);
                 }
