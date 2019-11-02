@@ -46,7 +46,7 @@ public class SoulParticle : MonoBehaviour
         {
             RaycastHit hitInfo;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
+            
             if (Physics.Raycast(ray, out hitInfo))
             {
                 if (hitInfo.collider.tag != "rayPlane" && hitInfo.collider.tag != "Player")

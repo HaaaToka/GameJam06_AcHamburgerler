@@ -15,12 +15,14 @@ public class Player : MonoBehaviour
     {
 
     }
-    private void Start()
+    protected void Start()
     {
         zaxis = gameObject.transform.position.z;
     }
-    private void Update()
+    protected void Update()
     {
+
+        
         isOn = gameObject.GetComponent<Animator>().GetBool("isOn");
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, zaxis);
         if (isOn)
@@ -31,6 +33,7 @@ public class Player : MonoBehaviour
             }
             if (Input.GetKey("d"))
             {
+
                 Move("right");
             }
             else if (Input.GetKey("a"))
