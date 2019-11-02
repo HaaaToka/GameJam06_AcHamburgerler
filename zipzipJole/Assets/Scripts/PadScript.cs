@@ -7,10 +7,11 @@ using UnityEngine.UI;
 public class PadScript : MonoBehaviour
 {
     public GameObject[] stars;
+    public GameObject zoomCamera;
     float star1;
     float star2;
     float star3;
-    bool Lerp = false;
+    public bool Lerp = false;
     public GameObject SuccessPanel;
     // Start is called before the first frame update
     void Start()
@@ -38,15 +39,16 @@ public class PadScript : MonoBehaviour
         }
     }
     int score;
-    int loop = 5;
+    
     
     void Success()
     {
-        SuccessPanel.SetActive(true);
+        zoomCamera.SetActive(true);
+
+        //SuccessPanel.SetActive(true);
         score = Int32.Parse(GameObject.Find("particleText").GetComponent<Text>().text);
+        //Debug.Log(stars[0].GetComponent<Image>().fillAmount);
         
-        
-        Debug.Log(stars[0].GetComponent<Image>().fillAmount);
         //if (stars[0].GetComponent<Image>().fillAmount < 0.98f && stars[0].GetComponent<Image>().fillAmount < score / 30)
         Lerp = true;
 

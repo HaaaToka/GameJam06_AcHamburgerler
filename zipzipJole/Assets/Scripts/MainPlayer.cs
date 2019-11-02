@@ -8,13 +8,23 @@ public class MainPlayer : Player
     public int jumpMag = 20;
     // Start is called before the first frame update
     [SerializeField] GameObject enivici;
+    private PadScript pPad;
     private Animator animator;
     protected void Start()
     {
         
         base.Start();
+        pPad = GameObject.Find("pressurePad").GetComponent<PadScript>();
         animator = GetComponent<Animator>();
         GetComponent<Rigidbody>().centerOfMass -= new Vector3(0, 1.5f, 0);
+    }
+    protected void Update()
+    {
+        base.Update();
+        if (pPad.Lerp)
+        {
+            animator.SetTrigger("Dance");
+        }
     }
     protected override void Move(string direction)
     {

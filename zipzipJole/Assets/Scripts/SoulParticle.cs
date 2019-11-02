@@ -56,7 +56,7 @@ public class SoulParticle : MonoBehaviour
                     particleText.text = Mathf.Ceil(particleCount).ToString();
                 }
                 gameObject.transform.position = hitInfo.point;
-                if (hitInfo.collider.tag == "Player" && Input.GetMouseButtonDown(0))
+                if (hitInfo.collider.tag == "Player" && Input.GetMouseButtonDown(0) && hitInfo.collider.GetComponent<Animator>().GetBool("isOn"))
                 {
                     hitInfo.collider.GetComponent<Animator>().SetBool("isTapped", true);
                     particle.SetActive(true);
@@ -68,7 +68,7 @@ public class SoulParticle : MonoBehaviour
         }
         else
         {
-            if (lastHit != null && lastHit.tag == "Player" && Input.GetMouseButtonUp(0))
+            if (lastHit != null && lastHit.tag == "Player" && Input.GetMouseButtonUp(0) && particle.GetComponent<ParticleSystem>().isPlaying)
             {
                 
                 foreach (Animator i in animators)

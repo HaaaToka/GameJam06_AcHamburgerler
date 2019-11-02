@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 5822462700956480999}
   - component: {fileID: 5822462700956480998}
   m_Layer: 0
-  m_Name: Idle
+  m_Name: MainPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveFrc: 3
-  jumpMag: 20
+  jumpMag: 200
   enivici: {fileID: 5822462701102338847}
 --- !u!1 &2624577800264662976
 GameObject:
@@ -1323,13 +1323,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7668513223554358363}
-  m_LocalRotation: {x: 0.046221044, y: 0.89712375, z: -0.19089507, w: 0.3957167}
-  m_LocalPosition: {x: -7.1911044, y: 6.483896, z: 6.1233287}
+  m_LocalRotation: {x: 0.16655418, y: 0.91794455, z: -0.104101144, w: -0.34467456}
+  m_LocalPosition: {x: 11.33, y: 2.37, z: 11.68}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 1564787791011154107}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.3760004, y: 222.02199, z: 22.250002}
 --- !u!20 &5139395996929522642
 Camera:
   m_ObjectHideFlags: 0

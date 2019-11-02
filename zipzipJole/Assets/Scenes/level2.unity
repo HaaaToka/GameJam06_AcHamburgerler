@@ -5844,6 +5844,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6766644c341bfa4990b0b8fd2bd5a9e, type: 3}
+--- !u!1 &1789521080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7668513223554358363, guid: 36d8ee5b5cf339d44b2d2d9250b97b0d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5822462700305065307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1806112419
 GameObject:
   m_ObjectHideFlags: 0
@@ -7167,6 +7173,11 @@ PrefabInstance:
       objectReference: {fileID: 788948866}
     - target: {fileID: 2102184559411763484, guid: 0028ca76a129241438634bb9e0a01a7e,
         type: 3}
+      propertyPath: zoomCamera
+      value: 
+      objectReference: {fileID: 1789521080}
+    - target: {fileID: 2102184559411763484, guid: 0028ca76a129241438634bb9e0a01a7e,
+        type: 3}
       propertyPath: SuccessPanel
       value: 
       objectReference: {fileID: 11898984}
@@ -7244,11 +7255,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5822462700956480998, guid: 36d8ee5b5cf339d44b2d2d9250b97b0d,
-        type: 3}
-      propertyPath: jumpMag
-      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36d8ee5b5cf339d44b2d2d9250b97b0d, type: 3}
