@@ -19,6 +19,10 @@ public class Player : MonoBehaviour
     {
         zaxis = gameObject.transform.position.z;
     }
+    protected virtual void Idle()
+    {
+
+    }
     protected void Update()
     {
 
@@ -27,6 +31,8 @@ public class Player : MonoBehaviour
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, zaxis);
         if (isOn)
         {
+            
+
             if (Input.GetKeyDown("space"))
             {
                 Jump();
@@ -39,6 +45,10 @@ public class Player : MonoBehaviour
             else if (Input.GetKey("a"))
             {
                 Move("left");
+            }
+            else
+            {
+                Idle();
             }
         }
     }

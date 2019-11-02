@@ -28,7 +28,7 @@ public class PadScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.tag == "Player")
+        if(collision.collider.name =="MainPlayer")
         {
             if (!Lerp)
             {

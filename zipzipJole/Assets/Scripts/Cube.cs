@@ -22,4 +22,5 @@ public class Cube : Player
             gameObject.transform.position -= new Vector3(moveFrc * Time.deltaTime, 0, 0);
         }
     }
+    
 }
