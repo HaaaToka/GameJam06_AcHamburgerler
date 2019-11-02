@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - rayplane
   - 
   - 
   - 
@@ -40,4 +40,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: rayplane
+    uniqueID: 4149226063
     locked: 0
