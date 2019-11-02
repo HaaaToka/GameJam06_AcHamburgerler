@@ -11,8 +11,14 @@ public class SoulParticle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animators = new Animator[2];
         var players = GameObject.FindGameObjectsWithTag("Player");
+        int len=0;
+        for(int i = 0; i< players.Length; i++)
+        {
+            len++;
+        }
+        animators = new Animator[len];
+        
         for (int i = 0; i < animators.Length; i++)
         {
             animators[i] = players[i].GetComponent < Animator> ();
