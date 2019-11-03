@@ -126,13 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea958501fe5d1848a05e42262cdb91b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stars:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  confetti: {fileID: 0}
   zoomCamera: {fileID: 0}
+  intreac: {fileID: 0}
   Lerp: 0
-  SuccessPanel: {fileID: 0}
+  NextLevel: {fileID: 0}
 --- !u!54 &4520126703437249438
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -147,5 +145,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 14
   m_CollisionDetection: 0

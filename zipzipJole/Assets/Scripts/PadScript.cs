@@ -2,49 +2,66 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class PadScript : MonoBehaviour
 {
-    public GameObject[] stars;
+    
+    public GameObject confetti;
     public GameObject zoomCamera;
-    float star1;
-    float star2;
-    float star3;
+    public GameObject fakeCam;
+    public IntreactibleObj intreac;
+
     public bool Lerp = false;
-    public GameObject SuccessPanel;
+    public GameObject NextLevel;
+    Animator animator;
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = gameObject.GetComponent<Animator>();
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Lerp)
-        {
-            SuccessInit();
-        }
+        
     }
+    
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.name =="MainPlayer")
         {
             if (!Lerp)
             {
-                gameObject.GetComponent<Animator>().SetTrigger("pressTrigger");
+                animator.SetBool("pressTrigger",true);
                 Success();
             }
         }
+        else if(collision.collider.tag == "Player")
+        {
+            if (intreac)
+                intreac.Intreacted();
+            animator.SetBool("pressTrigger", true);
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if(intreac)
+            intreac.IntreactedExit();
+        animator.SetBool("pressTrigger", false);
     }
     int score;
     
     
     void Success()
     {
+        NextLevel.SetActive(true);
         zoomCamera.SetActive(true);
-
+        
+        confetti.SetActive(true);
         //SuccessPanel.SetActive(true);
         score = Int32.Parse(GameObject.Find("particleText").GetComponent<Text>().text);
         //Debug.Log(stars[0].GetComponent<Image>().fillAmount);
@@ -53,7 +70,7 @@ public class PadScript : MonoBehaviour
         Lerp = true;
 
     }
-    
+   /* 
     void SuccessInit()
     {
         if (score < 30)
@@ -75,5 +92,5 @@ public class PadScript : MonoBehaviour
             stars[1].SetActive(true);
             stars[2].SetActive(true);
         }
-    }
+    }*/
 }

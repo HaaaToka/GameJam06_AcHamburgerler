@@ -26,8 +26,9 @@ public class MainPlayer : Player
             animator.SetTrigger("Dance");
         }
     }
-    protected override void Move(string direction)
+    public override void Move(string direction)
     {
+        base.Move(direction);
         if (direction == "right")
         {
             gameObject.transform.position += new Vector3(moveFrc * Time.deltaTime, 0, 0);
@@ -41,9 +42,9 @@ public class MainPlayer : Player
             enivici.SetActive(true);
         }
     }
-    protected override void Jump()
+    public override void Jump()
     {
-        
+        base.Jump();
         animator.SetTrigger("jumped");
         Invoke("DoSomething", 0.5f);
         gameObject.GetComponent<Rigidbody>().AddForce(0, jumpMag, 0);

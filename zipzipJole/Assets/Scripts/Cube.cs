@@ -7,12 +7,14 @@ public class Cube : Player
     // Start is called before the first frame update
     public int jumpMag = 20;
     public int moveFrc = 1;
-    protected override void Jump()
+    public override void Jump()
     {
+        base.Jump();
         gameObject.GetComponent<Rigidbody>().AddForce(0, jumpMag, 0);
     }
-    protected override void Move(string direction)
+    public override void Move(string direction)
     {
+        base.Move(direction);
         if(direction == "right")
         {
             gameObject.transform.position += new Vector3(moveFrc * Time.deltaTime, 0, 0);
