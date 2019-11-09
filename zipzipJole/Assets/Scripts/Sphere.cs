@@ -17,11 +17,11 @@ public class Sphere : Player
         base.Move(direction);
         if (direction == "right")
         {
-            gameObject.GetComponent<Rigidbody>().AddForce(moveFrc, 0, 0);
+            gameObject.GetComponent<Rigidbody>().AddForce(moveFrc *Time.deltaTime, 0, 0);
         }
         if (direction == "left")
         {
-            gameObject.GetComponent<Rigidbody>().AddForce(-moveFrc, 0, 0);
+            gameObject.GetComponent<Rigidbody>().AddForce(-moveFrc *Time.deltaTime, 0, 0);
         }
     }
 }

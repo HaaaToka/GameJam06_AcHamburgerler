@@ -9,7 +9,6 @@ ScriptsOnlyBuild:
     - SoulParticle
     - Sphere
     - UIPresser
-    - cubeScript
     - holeCam
     - move
     - star
@@ -105,12 +104,14 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11196}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11392}
+      Script: {instanceID: 11394}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -188,19 +189,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10810}
     - Class: 114
-      Script: {instanceID: 10910}
-    - Class: 114
       Script: {instanceID: 10988}
     - Class: 114
       Script: {instanceID: 11046}
     - Class: 114
       Script: {instanceID: 11092}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11392}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 18042}
+      Script: {instanceID: 11394}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -287,19 +286,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10810}
     - Class: 114
-      Script: {instanceID: 10910}
-    - Class: 114
       Script: {instanceID: 10988}
     - Class: 114
       Script: {instanceID: 11046}
     - Class: 114
       Script: {instanceID: 11092}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11392}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 18042}
+      Script: {instanceID: 11394}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -390,19 +387,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10810}
     - Class: 114
-      Script: {instanceID: 10910}
-    - Class: 114
       Script: {instanceID: 10988}
     - Class: 114
       Script: {instanceID: 11046}
     - Class: 114
       Script: {instanceID: 11148}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11392}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 18042}
+      Script: {instanceID: 11394}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -489,21 +484,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10810}
     - Class: 114
-      Script: {instanceID: 10910}
-    - Class: 114
       Script: {instanceID: 10988}
     - Class: 114
       Script: {instanceID: 11046}
     - Class: 114
       Script: {instanceID: 11092}
     - Class: 114
-      Script: {instanceID: 11148}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11392}
-    - Class: 114
-      Script: {instanceID: 18042}
+      Script: {instanceID: 11394}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -647,7 +638,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: a840cc685172cafbf148dca2c7b82818
+      Hash: e2500d3bdd8c60c5d1797c635a04cf57
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SoulParticle
@@ -935,6 +926,12 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: 400574be6b0c3414a9912341827de045
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIPresser
+  - hash:
+      serializedVersion: 2
       Hash: df434544c9f7b33d1cc7e635b180d279
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -947,7 +944,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 97af200aff79abbb568a35b6853671a3
+      Hash: 809c15c9e8976d9d60409ce782d5fba3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainPlayer
@@ -1029,12 +1026,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 400574be6b0c3414a9912341827de045
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: UIPresser
   platform: 13
   scenePathNames:
   - Assets/Scenes/StartScene.unity

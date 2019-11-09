@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class MainPlayer : Player
 {
-    public int moveFrc = 1;
+    public float moveFrc = 1f;
     public int jumpMag = 20;
     // Start is called before the first frame update
     [SerializeField] GameObject enivici;
     private PadScript pPad;
-    private Animator animator;
+    
+    float zRot;
     protected void Start()
     {
-        
+        zRot = transform.localEulerAngles.z;
+
         base.Start();
         pPad = GameObject.Find("pressurePad").GetComponent<PadScript>();
-        animator = GetComponent<Animator>();
+        
         GetComponent<Rigidbody>().centerOfMass -= new Vector3(0, 1.5f, 0);
     }
     protected void Update()
@@ -25,7 +27,11 @@ public class MainPlayer : Player
         {
             animator.SetTrigger("Dance");
         }
+        Quaternion temp = transform.rotation;
+        temp = Quaternion.Euler(temp.eulerAngles.x, 90, 0);
+        transform.rotation = temp;
     }
+    
     public override void Move(string direction)
     {
         base.Move(direction);
@@ -46,7 +52,7 @@ public class MainPlayer : Player
     {
         base.Jump();
         animator.SetTrigger("jumped");
-        Invoke("DoSomething", 0.5f);
+        //Invoke("DoSomething", 0.5f);
         gameObject.GetComponent<Rigidbody>().AddForce(0, jumpMag, 0);
     }
     protected override void Idle()

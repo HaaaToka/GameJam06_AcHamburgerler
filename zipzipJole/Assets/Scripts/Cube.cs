@@ -12,6 +12,7 @@ public class Cube : Player
         base.Jump();
         gameObject.GetComponent<Rigidbody>().AddForce(0, jumpMag, 0);
     }
+
     public override void Move(string direction)
     {
         base.Move(direction);

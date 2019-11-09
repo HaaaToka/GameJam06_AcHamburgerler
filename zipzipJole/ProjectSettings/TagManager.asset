@@ -8,6 +8,7 @@ TagManager:
   - rayPlane
   - MainP
   - zoomCam
+  - particle
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - 
   - rayplane
-  - 
+  - MainPlayerTouch
   - 
   - 
   - 

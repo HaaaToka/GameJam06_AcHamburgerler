@@ -32,7 +32,8 @@ public class PadScript : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.name =="MainPlayer")
+        
+        if(collision.collider.tag =="MainP")
         {
             if (!Lerp)
             {
@@ -60,7 +61,7 @@ public class PadScript : MonoBehaviour
     {
         NextLevel.SetActive(true);
         zoomCamera.SetActive(true);
-        
+        Camera.main.gameObject.SetActive(false);
         confetti.SetActive(true);
         //SuccessPanel.SetActive(true);
         score = Int32.Parse(GameObject.Find("particleText").GetComponent<Text>().text);

@@ -8,10 +8,12 @@ public class SoulParticle : MonoBehaviour
     public float particleCount = 100f;
     public float loseMultiplier = 3f;
     [SerializeField] GameObject particle;
+    [SerializeField] GameObject dropParticle;
     private Text particleText;
     private Animator[] animators;
     Collider lastHit;
-
+    float deltaTime;
+    ParticleSystem.EmissionModule emission;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,8 @@ public class SoulParticle : MonoBehaviour
         particleText.text = Mathf.Ceil(particleCount).ToString();
         var players = GameObject.FindGameObjectsWithTag("Player");
         int len=0;
-        for(int i = 0; i< players.Length; i++)
+        emission = particle.GetComponent<ParticleSystem>().emission;
+        for (int i = 0; i< players.Length; i++)
         {
             len++;
         }
@@ -35,12 +38,15 @@ public class SoulParticle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+        float fps = 1.0f / deltaTime;
+        particleText.text = Mathf.Ceil(fps).ToString();*/
         soulActive();
     }
    
     void soulActive()
     {
-        
+        emission.rateOverTime =  particleCount* particleCount/10;
         var mouse = Input.GetMouseButton(0);
         if (mouse)
         {
@@ -51,9 +57,20 @@ public class SoulParticle : MonoBehaviour
             {
                 if (hitInfo.collider.tag != "rayPlane" && hitInfo.collider.tag != "Player")
                 {
-                    if(particle.GetComponent<ParticleSystem>().isPlaying)
+                    if (particle.GetComponent<ParticleSystem>().isPlaying)
+                    {
                         particleCount -= loseMultiplier * Time.deltaTime;
+                        dropParticle.SetActive(true);
+                    }
+                    else
+                    {
+                        dropParticle.SetActive(false);
+                    }
                     particleText.text = Mathf.Ceil(particleCount).ToString();
+                }
+                else
+                {
+                    dropParticle.SetActive(false);
                 }
                 gameObject.transform.position = hitInfo.point;
                 if (hitInfo.collider.tag == "Player" && Input.GetMouseButtonDown(0) && hitInfo.collider.GetComponent<Animator>().GetBool("isOn"))
@@ -68,6 +85,7 @@ public class SoulParticle : MonoBehaviour
         }
         else
         {
+            dropParticle.SetActive(false);
             if (lastHit != null && lastHit.tag == "Player" && Input.GetMouseButtonUp(0) && particle.GetComponent<ParticleSystem>().isPlaying)
             {
                 

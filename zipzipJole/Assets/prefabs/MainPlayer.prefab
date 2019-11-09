@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 2660327010707193042}
   m_Layer: 0
   m_Name: Icosphere.001
-  m_TagString: Untagged
+  m_TagString: MainP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 5822462700956480992}
   - component: {fileID: 5822462700956480999}
   - component: {fileID: 5822462700956480998}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MainPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 40
   m_CollisionDetection: 0
 --- !u!65 &5822462700956480999
 BoxCollider:
@@ -451,8 +451,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4412844, y: 2.6487424, z: 0.69610524}
-  m_Center: {x: 0.34172717, y: 1.3014919, z: 0.049994934}
+  m_Size: {x: 1.4412844, y: 3.422492, z: 2.1735616}
+  m_Center: {x: 0.34172717, y: 1.6883664, z: 0.28656796}
 --- !u!114 &5822462700956480998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveFrc: 3
-  jumpMag: 200
+  jumpMag: 7
   enivici: {fileID: 5822462701102338847}
 --- !u!1 &2624577800264662976
 GameObject:
@@ -509,9 +509,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7146502448715024161}
   - component: {fileID: 86403276679038796}
+  - component: {fileID: 637254037}
   m_Layer: 0
   m_Name: Icosphere.005
-  m_TagString: Untagged
+  m_TagString: MainP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -583,6 +584,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.108581066, y: 1.1348177, z: -0.003214717}
     m_Extent: {x: 1.1649678, y: 0.95082676, z: 1.0679022}
   m_DirtyAABB: 0
+--- !u!135 &637254037
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2647087948435453369}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.010507162
+  m_Center: {x: -0.017, y: 0.019, z: -0.023310255}
 --- !u!1 &2742947290492226808
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,9 +786,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1863149191119459195}
   - component: {fileID: 3773070549508279004}
+  - component: {fileID: 1371207832}
+  - component: {fileID: 1371207833}
   m_Layer: 0
   m_Name: Icosphere
-  m_TagString: Untagged
+  m_TagString: MainP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -856,6 +872,32 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.07279897, y: 0.23944092, z: 0.07436419}
     m_Extent: {x: 0.34689093, y: 0.51987326, z: 0.32087195}
   m_DirtyAABB: 0
+--- !u!65 &1371207832
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4318259506483564966}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020572362, y: 0.007400247, z: 0.018292652}
+  m_Center: {x: -0.097096205, y: 0.06555848, z: -0.0421233}
+--- !u!65 &1371207833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4318259506483564966}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04372622, y: 0.016767537, z: 0.009471521}
+  m_Center: {x: -0.096172884, y: 0.0702414, z: -0.057481017}
 --- !u!1 &4512678229876902697
 GameObject:
   m_ObjectHideFlags: 0
