@@ -1,10 +1,10 @@
 # GameJam06_AcHamburgerler
 GameJam Etkiliğinde neler mi yaptık? Azra Melis Ertan, Yusuf Tolga Yönter, [Tarık Işıldar](https://github.com/tarikisildar)<br>
 
-Girişte güzel bir look kaptık :)
+Girişte güzel bir loot kaptık :)<br>
 <img src="https://github.com/HaaaToka/GameJam06_AcHamburgerler/blob/master/loot.jpg"><br>
 
-2 günlük yarışmada bol bol yemek yedik
+2 günlük yarışmada bir şey yemedik dersek ayıp olur gece gündüz tıkındık
 <img src="https://github.com/HaaaToka/GameJam06_AcHamburgerler/blob/master/geceMANGALatistirmasi.jpg"><br>
 
 Tabi sadece yemedik bolca da çalıştık ;)
